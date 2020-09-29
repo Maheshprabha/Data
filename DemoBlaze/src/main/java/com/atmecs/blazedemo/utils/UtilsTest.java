@@ -1,4 +1,4 @@
-package com.atmecs.blazedemo.excel;
+package com.atmecs.blazedemo.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class UtilsTest {
-	public static   String[][] excel(String path) throws IOException {
+	public static String[][] excel(String path) throws IOException {
 		File file = new File(path);
 		FileInputStream fileInput = new FileInputStream(file);
 		@SuppressWarnings("resource")
@@ -23,20 +23,15 @@ public class UtilsTest {
 		String array[][] = new String[row1][col];
 		int count = 0;
 		for (Row row : sheet) {
-		int count1 = 0;
-		for (Cell cell : row) {
-		String Data = cell.toString();
-		array[count][count1] = Data;
-		count1++;
-		}
-		count++;
+			int count1 = 0;
+			for (Cell cell : row) {
+				String Data = cell.toString();
+				array[count][count1] = Data;
+				count1++;
+			}
+			count++;
 		}
 
 		return array;
-		}
-			}
-
-			
-
-
-
+	}
+}

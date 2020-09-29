@@ -7,8 +7,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.atmecs.blazedemo.baseclass.BaseClass;
-import com.atmecs.blazedemo.excel.UtilsTest;
 import com.atmecs.blazedemo.pageactions.LoginPageAction;
+import com.atmecs.blazedemo.utils.UtilsTest;
 
 
 public class LoginTest extends BaseClass {

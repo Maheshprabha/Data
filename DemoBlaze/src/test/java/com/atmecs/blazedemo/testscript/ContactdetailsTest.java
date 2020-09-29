@@ -8,8 +8,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.atmecs.blazedemo.baseclass.BaseClass;
-import com.atmecs.blazedemo.excel.UtilsTest;
 import com.atmecs.blazedemo.pageactions.ContactDetailsPageAction;
+import com.atmecs.blazedemo.utils.UtilsTest;
 
 
 public class ContactdetailsTest extends BaseClass {
