@@ -11,5 +11,6 @@ public class FilePath {
 	public static final String Config_Path = "./src/test/resources/config.property";
 	public static final String locator_path = "./src/test/resources/locators.property";
 	public static final String User_path = "./src/test/resources/userdata.property";
-	public static final String Valid_path = "./src/test/resources/validation.property";
+	public static final String Valid_path = "./src/test/resources/Userinformation.xlsx";
+	public static final String Log4j_path = "./log4j.properties";
 }

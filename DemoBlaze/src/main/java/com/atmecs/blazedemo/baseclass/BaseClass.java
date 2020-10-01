@@ -15,7 +15,7 @@ public class BaseClass {
      Properties property;
      public static WebDriver driver;
      @BeforeTest
-      public void invokeBrowser() throws IOException {
+      public void invokeBrowser(String browserType) throws IOException {
     	  property = ReaderLocation.readLocation(FilePath.Config_Path);
           System.setProperty("webdriver.chrome.driver", FilePath.Driver_Path);
           driver = new ChromeDriver();

@@ -9,12 +9,16 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.atmecs.blazedemo.filepath.FilePath;
+
 public class UtilsTest {
+	@SuppressWarnings({ "unused", "resource" })
 	public static String[][] excel(String path) throws IOException {
 		File file = new File(path);
-		FileInputStream fileInput = new FileInputStream(file);
-		@SuppressWarnings("resource")
-		XSSFWorkbook book = new XSSFWorkbook(fileInput);
+	
+		FileInputStream fileInput = new FileInputStream(FilePath.Valid_path);
+		
+		XSSFWorkbook book = new XSSFWorkbook();
 		XSSFSheet sheet = book.getSheetAt(0);
 		int row1 = sheet.getLastRowNum();
 		row1 += 1;
