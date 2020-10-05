@@ -1,31 +1,17 @@
 package com.atmecs.blazedemo.readerlocation;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.io.IOException;
 import java.util.Properties;
 
 public class ReaderLocation {
 	static Properties property;
 
-	public static String readLocation(String path) {
-		String data = null;
+	public static Properties readLocation(String path) throws IOException {
 		property = new Properties();
-		FileInputStream reader = null;
-		try {
-			reader = new FileInputStream(path);
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();
-		}
-		try {
-			property.load(reader);
-			data = property.getProperty(elements);
-
-		} catch (IOException e) {
-	       e.printStackTrace();
-		}
-		return data;
+		FileInputStream file = new FileInputStream(path);
+		property.load(file);
+		return property;
 	}
- 
 }

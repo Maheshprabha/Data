@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import com.atmecs.automation.helpers.CommonHelpers;
+
 public class CommonHelpers {
 	public static void webElement(WebDriver driver, String elementPath, String actual, String expected) {
 		driver.findElement(By.xpath(elementPath)).getText();
@@ -61,9 +63,16 @@ public class CommonHelpers {
 	
     driver.switchTo().window(mainWindow);
 	System.out.println("mainwindow" + driver.switchTo().window(mainWindow).getTitle());
+	}
+    
+    	 
+     }
+
+	
+
 
     
 	}
 	}
-	}
+	
 
